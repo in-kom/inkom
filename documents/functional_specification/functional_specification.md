@@ -5,6 +5,7 @@
     - [1. Glossary](#1-glossary)
     - [2.Project Overview](#2project-overview)
     - [3. Project Definition](#3-project-definition)
+      - [Vision](#vision)
 
 ## I. Introduction
 
@@ -24,3 +25,6 @@ Entitled "Inkom", this application aims to be the first software of the Inkom co
 
 ### 3. Project Definition
 
+#### Vision
+
+The vision of Inkom is to help professionals recenter on their core business while guaranteeing them an impactful communication. 
