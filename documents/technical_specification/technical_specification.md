@@ -1,2 +1,1 @@
-# Functional Specifications - Inkom
-
+# Inkom - Technical Specification

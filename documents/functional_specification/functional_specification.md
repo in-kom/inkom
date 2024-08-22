@@ -6,6 +6,25 @@
     - [2.Project Overview](#2project-overview)
     - [3. Project Definition](#3-project-definition)
       - [Vision](#vision)
+      - [Objectives](#objectives)
+      - [Scope](#scope)
+      - [Target Audience](#target-audience)
+      - [Deliverables](#deliverables)
+    - [4. Project Organization](#4-project-organization)
+      - [Stakeholders](#stakeholders)
+    - [5. Project Plan](#5-project-plan)
+      - [Key Milestones](#key-milestones)
+      - [Timeline Visualization](#timeline-visualization)
+  - [II. UI/UX](#ii-uiux)
+    - [1. Mockups](#1-mockups)
+    - [2. Unique UI Feature](#2-unique-ui-feature)
+    - [3. Color Palette](#3-color-palette)
+    - [4. Font](#4-font)
+    - [5. Assets](#5-assets)
+  - [III. Functional Requirements](#iii-functional-requirements)
+    - [1. Registration](#1-registration)
+    - [2. More](#2-more)
+  - [IV. Non-functional requirements](#iv-non-functional-requirements)
 
 ## I. Introduction
 
@@ -28,3 +47,45 @@ Entitled "Inkom", this application aims to be the first software of the Inkom co
 #### Vision
 
 The vision of Inkom is to help professionals recenter on their core business while guaranteeing them an impactful communication. 
+
+#### Objectives
+
+- Create a web-based platform which can be declined as a mobile and desktop app
+- Intuitiveness: 
+
+#### Scope
+
+#### Target Audience
+
+#### Deliverables
+
+### 4. Project Organization
+
+#### Stakeholders
+
+### 5. Project Plan
+
+#### Key Milestones
+
+#### Timeline Visualization
+
+## II. UI/UX
+
+### 1. Mockups
+
+### 2. Unique UI Feature
+
+### 3. Color Palette
+
+### 4. Font
+
+### 5. Assets
+
+## III. Functional Requirements
+
+### 1. Registration
+
+### 2. More
+
+## IV. Non-functional requirements
+
