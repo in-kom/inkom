@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
+  // Translation module
+  const { t } = useTranslation();
   // State to manage notifications
   const [notification, setNotification] = useState<{
     message: string;
@@ -17,28 +20,51 @@ function App() {
     }, 3000);
   };
 
-  async function prelaunchRegister() {
-    console.log(API_URL);
+  async function prelaunchRegister(): Promise<void> {
     const mailField = document.getElementById("email") as HTMLInputElement;
+
+    // Validate email
     if (
       mailField.value &&
       mailField.value !== "" &&
       mailField.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)
     ) {
-      await axios
-        .post(`${API_URL}/v0/prelaunch/subscribe`, {
+      try {
+        const response = await axios.post(`${API_URL}/v0/prelaunch/subscribe`, {
           email: mailField.value,
-        })
-        .then((response) => {
-          if (response.status === 409) {
-            showNotification("Vous êtes déjà inscrit", "error");
-          } else if (response.status === 201) {
-            showNotification("Subscribed successfully", "success");
-          }
         });
-      mailField.value = "";
+
+        // Handle success
+        if (response.status === 201) {
+          showNotification(t("subscription.success"), "success");
+        }
+
+        // Clear the email field
+        mailField.value = "";
+      } catch (error: any) {
+        // Handle Axios errors, especially 409 Conflict
+        if (error.response) {
+          if (error.response.status === 409) {
+            showNotification(t("subscription.alreadySubscribed"), "error");
+          } else if (
+            error.response.status >= 400 &&
+            error.response.status < 500
+          ) {
+            showNotification(
+              error.response.data.message ||
+              t("subscription.error"),
+              "error"
+            );
+          } else {
+            showNotification(t("subscription.serverError"), "error");
+          }
+        } else {
+          showNotification(t("subscription.networkError"), "error");
+        }
+      }
     } else {
-      showNotification("Please enter a valid email address", "error");
+      // Invalid email
+      showNotification(t("subscription.invalidEmail"), "error");
     }
   }
 
@@ -106,10 +132,10 @@ function App() {
         <div className="w-screen h-screen flex flex-col items-center justify-center absolute top-0 left-0">
           <img src="/assets/inkom.png" alt="Inkom" className="w-2/5" />
           <h1 className="text-3xl font-bold text-white w-1/2 text-center">
-            Don't make your online presence a pain, gain time and engage more!
+            {t("content.slogan")}
           </h1>
           <label className="text-white mt-4">
-            Sign up to be informed of our product launch:
+          {t("content.cta")}
           </label>
           <input
             type="email"
@@ -121,7 +147,7 @@ function App() {
             className="bg-blue-500 text-white p-2 mt-4 rounded-lg"
             onClick={prelaunchRegister}
           >
-            Sign up
+            {t("content.button")}
           </button>
         </div>
 
