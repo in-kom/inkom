@@ -1,91 +1,160 @@
 # Inkom - Functional Specification
 
 - [Inkom - Functional Specification](#inkom---functional-specification)
-  - [I. Introduction](#i-introduction)
-    - [1. Glossary](#1-glossary)
-    - [2.Project Overview](#2project-overview)
-    - [3. Project Definition](#3-project-definition)
-      - [Vision](#vision)
-      - [Objectives](#objectives)
-      - [Scope](#scope)
-      - [Target Audience](#target-audience)
-      - [Deliverables](#deliverables)
-    - [4. Project Organization](#4-project-organization)
-      - [Stakeholders](#stakeholders)
-    - [5. Project Plan](#5-project-plan)
-      - [Key Milestones](#key-milestones)
-      - [Timeline Visualization](#timeline-visualization)
-  - [II. UI/UX](#ii-uiux)
-    - [1. Mockups](#1-mockups)
-    - [2. Unique UI Feature](#2-unique-ui-feature)
-    - [3. Color Palette](#3-color-palette)
-    - [4. Font](#4-font)
-    - [5. Assets](#5-assets)
-  - [III. Functional Requirements](#iii-functional-requirements)
-    - [1. Registration](#1-registration)
-    - [2. More](#2-more)
-  - [IV. Non-functional requirements](#iv-non-functional-requirements)
+  - [1. Introduction](#1-introduction)
+    - [1.1. Project Overview](#11-project-overview)
+    - [1.2. Project Definition](#12-project-definition)
+      - [1.2.1. Vision](#121-vision)
+      - [1.2.2. Objectives](#122-objectives)
+      - [1.2.3. Scope](#123-scope)
+      - [1.2.4 Target Audience](#124-target-audience)
+      - [1.2.5. Deliverables](#125-deliverables)
+    - [1.3. Project Plan](#13-project-plan)
+      - [1.3.1. Retroplanning](#131-retroplanning)
+      - [1.3.2. Milestones](#132-milestones)
+      - [1.3.3. Dependencies](#133-dependencies)
+      - [1.3.4. Assumptions/Constraints](#134-assumptionsconstraints)
+      - [1.3.5. Risks/Mitigation](#135-risksmitigation)
+  - [2. Personas and Use Cases](#2-personas-and-use-cases)
+    - [2.1. Personas](#21-personas)
+      - [2.1.1. Persona 1 - \[Name\]](#211-persona-1---name)
+      - [2.1.2. Persona 2 - \[Name\]](#212-persona-2---name)
+      - [2.1.3. Persona 3 - \[Name\]](#213-persona-3---name)
+      - [2.1.4. Persona 4 - \[Name\]](#214-persona-4---name)
+    - [2.2. Use Cases](#22-use-cases)
+  - [3. Functional requirements](#3-functional-requirements)
+    - [3.1. Backend](#31-backend)
+      - [3.1.1. Overview](#311-overview)
+      - [3.1.2. Supported API Services](#312-supported-api-services)
+      - [3.1.3. Authentication requirements](#313-authentication-requirements)
+    - [3.2. Frontend](#32-frontend)
+      - [3.2.1. Overview](#321-overview)
+      - [3.2.2. Target Platforms](#322-target-platforms)
+      - [3.2.3. Graphical Charter \& Assets](#323-graphical-charter--assets)
+      - [3.2.4 Mockups](#324-mockups)
+      - [3.2.5. All pages to add here](#325-all-pages-to-add-here)
+      - [3.2.X. User Flow](#32x-user-flow)
+    - [3.3. Artificial Intelligence Model](#33-artificial-intelligence-model)
+      - [3.3.1. Overview](#331-overview)
+      - [3.3.2. Dataset](#332-dataset)
+      - [3.3.3. Input](#333-input)
+      - [3.3.4. Output](#334-output)
+  - [4. Non-functional Requirements](#4-non-functional-requirements)
+    - [4.1. Performance](#41-performance)
+    - [4.2. Scalability](#42-scalability)
+    - [4.3. Reliability](#43-reliability)
+    - [4.4. Availability](#44-availability)
+  - [5. Glossary](#5-glossary)
 
-## I. Introduction
+## 1. Introduction
 
-### 1. Glossary
+### 1.1. Project Overview
 
-| Term | Definition                                                                                                                                             |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SaaS | Standing for "Software as a Service". A cloud-based application accessed remotely by the user from its web browser rather than apps.                   |
-| PWA  | Standing for "Progressive Web App". An application using web platform technologies, but which provides an user experience like a platform-specific app |
-| AI   | Standing for "Artificial Intelligence". A set of theories and techniques aiming to reproduce human capabilities.                                       |
+This project aims to create a cross-platform app which gain professionals time when working on their communication. This app comes in the format of a SaaS and removes the entrance barrier communcation has, so the user can use this app even though he has no knowledge in this field.
 
-### 2.Project Overview
+This project is the end-of-cursus of [Antoine PREVOST](https://linkedin.com/in/antoine-prevost-dev) but also the 
 
-This project aims to create a SaaS along with a PWA allowing professionals in the food service and retail sectors to multiply the leads generated from their posts by 2, thanks to the usage of AI.
+### 1.2. Project Definition
 
-Entitled "Inkom", this application aims to be the first software of the Inkom company, a software development company specialized in digital communication-related softwares.
+#### 1.2.1. Vision
 
-### 3. Project Definition
+Inkom empowers entrepreneurs to focus on the core of their business by simplifying communication processes and creating more engaging posts. It opens opportunities for those lacking the expertise or resources to communicate effectively, helping them start confidently and build their voice.
 
-#### Vision
+Inkom transforms the communication value chain by supporting entrepreneurs at every stage, from strategy definition to post-performance analysis. The platform centralizes and schedules content publication across multiple social networks and generates content ideas, including video scripts, currently leveraging the ChatGPT API, but ours in future versions.
 
-The vision of Inkom is to help professionals recenter on their core business while guaranteeing them an impactful communication. 
+#### 1.2.2. Objectives
 
-#### Objectives
+- **API linking:** Create an endpoint from which you can communicate with various social media APIs.
+- **Cross-platform usage and support:** The website and apps should be accessible from various devices.
 
-- Create a web-based platform which can be declined as a mobile and desktop app
-- Intuitiveness: 
+#### 1.2.3. Scope
 
-#### Scope
+Develop a SaaS website and apps, allowing people to centralize their communication and streamline their process on a single platform. This is acheived, thanks to a proprietary AI guiding them in their content creation strategy.
 
-#### Target Audience
+#### 1.2.4 Target Audience
 
-#### Deliverables
+**Entrepreneurs:** Professional people struggling with communication, either by a lack of time, money or inspiration.
 
-### 4. Project Organization
+#### 1.2.5. Deliverables
 
-#### Stakeholders
+- Functional Specification Document
+- Technical Specification Document
+- Test Plan & Test Cases
+- Test Bed for the app
+- Mock-ups of the application
+- Source Code and AI model for content strategies
+- Source Code for the website and mobile application
+- User Manual
+- Final presentation of the project
 
-### 5. Project Plan
+### 1.3. Project Plan
 
-#### Key Milestones
+#### 1.3.1. Retroplanning
 
-#### Timeline Visualization
+#### 1.3.2. Milestones
 
-## II. UI/UX
+#### 1.3.3. Dependencies
 
-### 1. Mockups
+#### 1.3.4. Assumptions/Constraints
 
-### 2. Unique UI Feature
+#### 1.3.5. Risks/Mitigation
 
-### 3. Color Palette
+## 2. Personas and Use Cases
 
-### 4. Font
+### 2.1. Personas
 
-### 5. Assets
+#### 2.1.1. Persona 1 - [Name]
 
-## III. Functional Requirements
+#### 2.1.2. Persona 2 - [Name]
 
-### 1. Registration
+#### 2.1.3. Persona 3 - [Name]
 
-### 2. More
+#### 2.1.4. Persona 4 - [Name]
 
-## IV. Non-functional requirements
+### 2.2. Use Cases
 
+## 3. Functional requirements
+
+### 3.1. Backend
+
+#### 3.1.1. Overview
+
+#### 3.1.2. Supported API Services
+
+#### 3.1.3. Authentication requirements
+
+### 3.2. Frontend
+
+#### 3.2.1. Overview
+
+#### 3.2.2. Target Platforms
+
+#### 3.2.3. Graphical Charter & Assets
+
+#### 3.2.4 Mockups
+
+#### 3.2.5. All pages to add here
+
+#### 3.2.X. User Flow
+
+### 3.3. Artificial Intelligence Model
+
+#### 3.3.1. Overview
+
+#### 3.3.2. Dataset
+
+#### 3.3.3. Input
+
+#### 3.3.4. Output
+
+## 4. Non-functional Requirements
+
+### 4.1. Performance
+
+### 4.2. Scalability
+
+### 4.3. Reliability
+
+### 4.4. Availability
+
+## 5. Glossary
