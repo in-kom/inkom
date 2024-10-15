@@ -17,10 +17,10 @@
       - [1.3.5. Risks/Mitigation](#135-risksmitigation)
   - [2. Personas and Use Cases](#2-personas-and-use-cases)
     - [2.1. Personas](#21-personas)
-      - [2.1.1. Persona 1 - \[Name\]](#211-persona-1---name)
-      - [2.1.2. Persona 2 - \[Name\]](#212-persona-2---name)
-      - [2.1.3. Persona 3 - \[Name\]](#213-persona-3---name)
-      - [2.1.4. Persona 4 - \[Name\]](#214-persona-4---name)
+      - [2.1.1. Persona 1 - William Anderson](#211-persona-1---william-anderson)
+      - [2.1.2. Persona 2 - Emily Roberts](#212-persona-2---emily-roberts)
+      - [2.1.3. Persona 3 - Jonathan Mitchell](#213-persona-3---jonathan-mitchell)
+      - [2.1.4. Persona 4 - Sarah Thompson](#214-persona-4---sarah-thompson)
     - [2.2. Use Cases](#22-use-cases)
   - [3. Functional requirements](#3-functional-requirements)
     - [3.1. Backend](#31-backend)
@@ -69,7 +69,7 @@ Inkom transforms the communication value chain by supporting entrepreneurs at ev
 
 #### 1.2.3. Scope
 
-Develop a SaaS website and apps, allowing people to centralize their communication and streamline their process on a single platform. This is acheived, thanks to a proprietary AI guiding them in their content creation strategy.
+Develop a SaaS website and apps, allowing people to centralize their communication and streamline their communication process on a single platform. This is acheived, thanks to a proprietary AI guiding them in their content creation strategy.
 
 #### 1.2.4 Target Audience
 
@@ -103,13 +103,68 @@ Develop a SaaS website and apps, allowing people to centralize their communicati
 
 ### 2.1. Personas
 
-#### 2.1.1. Persona 1 - [Name]
+#### 2.1.1. Persona 1 - William Anderson
 
-#### 2.1.2. Persona 2 - [Name]
+Age: 53
+Location: Paris, Île-de-France
+Profession: Restaurateur
 
-#### 2.1.3. Persona 3 - [Name]
+**Goals:**
 
-#### 2.1.4. Persona 4 - [Name]
+- Make his posts more engaging to convince people following him on the social networks to come to his restaurant.
+- Keep his followers updated of the latest courses he prepares.
+
+**Frustrations:**
+
+- He has a limited knowledge about social networks management.
+- He wants to get engaging post propositions linked to his business.
+
+#### 2.1.2. Persona 2 - Emily Roberts
+
+Age: 32
+Location: Compiègne, Hauts-de-France
+Profession: Shoe store owner
+
+**Goals:**
+
+- Keep her followers updated about her stores new products and discounts.
+- Make people discover her store on multiple platforms.
+
+**Frustrations:**
+
+- She only knows how to efficiently target her users on a single platform, and is consequently posting on this sole one.
+- She has a lot of struggles finding innovative ideas for her business.
+
+#### 2.1.3. Persona 3 - Jonathan Mitchell
+
+Age: 32
+Location: Berlin, Germany
+Profession: Freelance in design
+
+**Goals:**
+
+- Create posts reaching a wider audience to promote his services.
+- Plan in advance his content publication on multiple social media platforms.
+
+**Frustrations:**
+
+- He needs to post his content on each platform individually, making him lose a lot of time.
+- He feels only a few people can identify to his publications.
+
+#### 2.1.4. Persona 4 - Sarah Thompson
+
+Age: 23
+Location: San Francisco, California
+Profession: Software Engineer & Collective Director
+
+**Goals:**
+
+- Initiate people about software development and break the existing clichés.
+- Inspire people to start their software development journey.
+
+**Frustrations:**
+
+- She wants to 
 
 ### 2.2. Use Cases
 
