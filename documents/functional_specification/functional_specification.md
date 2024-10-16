@@ -95,9 +95,22 @@ Develop a SaaS website and apps, allowing people to centralize their communicati
 
 #### 1.3.3. Dependencies
 
+**Task dependencies:**
+
+- Core Feature Development cannot start before the completion of the mock-ups.
+- Nice-to-have Features Development cannot start until Core Feature Development have not been completed.
+- Testing phase cannot start until Core Feature Development have not been completed.
+
 #### 1.3.4. Assumptions/Constraints
 
+**Assumptions:**
+
+- 
+
 #### 1.3.5. Risks/Mitigation
+
+| ID  | Description | Consequence | Impact | Likelihood | Mitigation/Avoidance |
+| --- | ----------- | ----------- | ------ | ---------- | -------------------- |
 
 ## 2. Personas and Use Cases
 
@@ -150,6 +163,7 @@ Profession: Freelance in design
 
 - He needs to post his content on each platform individually, making him lose a lot of time.
 - He feels only a few people can identify to his publications.
+- He doesn't understand anything about the analytics provided in the platforms and has difficulty having an overview of them.
 
 #### 2.1.4. Persona 4 - Sarah Thompson
 
@@ -164,7 +178,8 @@ Profession: Software Engineer & Collective Director
 
 **Frustrations:**
 
-- She wants to 
+- She has struggles to find ideas to post on a daily basis.
+- She wants a defined strategy she can easily refine depending on the performance of her posts and current trends.
 
 ### 2.2. Use Cases
 
@@ -174,15 +189,39 @@ Profession: Software Engineer & Collective Director
 
 #### 3.1.1. Overview
 
+The backend of Inkom application is designed to handle social media API requests. It also aims to handle all the user interactions with the app, such as login, file uploading for a scheduled posts and AI model requests.
+
+This part of the application will be the core of all the interactions between each of the project's components.
+
 #### 3.1.2. Supported API Services
 
+As an initial version (MVP), the application is only going to support a limited number of API Services to provide a glance of the capabilities of the app in the future. The list of supported social media platforms is the following:
+
+- YouTube
+- TikTok
+- Instagram
+- LinkedIn
+- Twitter
+
 #### 3.1.3. Authentication requirements
+
+Being connected to users' social medias means we need to match high standard security. Consequently, as of the creation of the MVP, we will require every user to have at least A2F activated to connect their social media.
 
 ### 3.2. Frontend
 
 #### 3.2.1. Overview
 
+The frontend is the project component which will be visible to all users, and needs therefore to have a seamless integration with him.
+
 #### 3.2.2. Target Platforms
+
+This application in a SaaS format will be used on multiple platforms to allow users to use it whenever and wherever they want:
+
+- Mobile Application (IOS & Android)
+- Desktop Application (Windows and Mac)
+- Website
+
+The integration of Linux and wider platforms will be done in future updates.
 
 #### 3.2.3. Graphical Charter & Assets
 
