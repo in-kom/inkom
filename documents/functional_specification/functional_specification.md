@@ -1,20 +1,25 @@
 # Inkom - Functional Specification
 
+
+<details>
+<summary>Table of Contents</summary>
+
 - [Inkom - Functional Specification](#inkom---functional-specification)
   - [1. Introduction](#1-introduction)
-    - [1.1. Project Overview](#11-project-overview)
-    - [1.2. Project Definition](#12-project-definition)
-      - [1.2.1. Vision](#121-vision)
-      - [1.2.2. Objectives](#122-objectives)
-      - [1.2.3. Scope](#123-scope)
-      - [1.2.4 Target Audience](#124-target-audience)
-      - [1.2.5. Deliverables](#125-deliverables)
-    - [1.3. Project Plan](#13-project-plan)
-      - [1.3.1. Retroplanning](#131-retroplanning)
-      - [1.3.2. Milestones](#132-milestones)
-      - [1.3.3. Dependencies](#133-dependencies)
-      - [1.3.4. Assumptions/Constraints](#134-assumptionsconstraints)
-      - [1.3.5. Risks/Mitigation](#135-risksmitigation)
+    - [1.1. Glossary](#11-glossary)
+    - [1.2. Project Overview](#12-project-overview)
+    - [1.3. Project Definition](#13-project-definition)
+      - [1.3.1. Vision](#131-vision)
+      - [1.3.2. Objectives](#132-objectives)
+      - [1.3.3. Scope](#133-scope)
+      - [1.3.4 Target Audience](#134-target-audience)
+      - [1.3.5. Deliverables](#135-deliverables)
+    - [1.4. Project Plan](#14-project-plan)
+      - [1.4.1. Retroplanning](#141-retroplanning)
+      - [1.4.2. Milestones](#142-milestones)
+      - [1.4.3. Dependencies](#143-dependencies)
+      - [1.4.4. Assumptions/Constraints](#144-assumptionsconstraints)
+      - [1.4.5. Risks/Mitigation](#145-risksmitigation)
   - [2. Personas and Use Cases](#2-personas-and-use-cases)
     - [2.1. Personas](#21-personas)
       - [2.1.1. Persona 1 - William Anderson](#211-persona-1---william-anderson)
@@ -44,38 +49,60 @@
     - [4.2. Scalability](#42-scalability)
     - [4.3. Reliability](#43-reliability)
     - [4.4. Availability](#44-availability)
-  - [5. Glossary](#5-glossary)
+</details>
 
 ## 1. Introduction
 
-### 1.1. Project Overview
+### 1.1. Glossary
 
-This project aims to create a cross-platform app which gain professionals time when working on their communication. This app comes in the format of a SaaS and removes the entrance barrier communcation has, so the user can use this app even though he has no knowledge in this field.
+| Term | Definition |
+| ---- | ---------- |
+| SaaS |            |
 
-This project is the end-of-cursus of [Antoine PREVOST](https://linkedin.com/in/antoine-prevost-dev) but also the 
+### 1.2. Project Overview
 
-### 1.2. Project Definition
+This project aims to create a SaaS-format cross-platform application to help professionals to create a more impactful communication thanks to Artificial Intelligence (AI) and social media platforms centralization.
 
-#### 1.2.1. Vision
+This project is the end-of-cursus project of [Antoine PREVOST](https://linkedin.com/in/antoine-prevost-dev), but also aims to create a company to sell this SaaS.
 
-Inkom empowers entrepreneurs to focus on the core of their business by simplifying communication processes and creating more engaging posts. It opens opportunities for those lacking the expertise or resources to communicate effectively, helping them start confidently and build their voice.
+### 1.3. Project Definition
 
-Inkom transforms the communication value chain by supporting entrepreneurs at every stage, from strategy definition to post-performance analysis. The platform centralizes and schedules content publication across multiple social networks and generates content ideas, including video scripts, currently leveraging the ChatGPT API, but ours in future versions.
+#### 1.3.1. Vision
 
-#### 1.2.2. Objectives
+Inkom empowers entrepreneurs to focus on their core business by streamlining and automating communication workflows. It creates opportunities for those lacking expertise or resources to communicate effectively, offering a comprehensive suite of tools to help them communicate with confidence.
 
-- **API linking:** Create an endpoint from which you can communicate with various social media APIs.
-- **Cross-platform usage and support:** The website and apps should be accessible from various devices.
+Inkom transforms the communication value chain by supporting entrepreneurs at every stage of their communication processes, including the following:
 
-#### 1.2.3. Scope
+- Defining a Communication Strategy
+- Linking Social Network Platforms
+- Generating Content Ideas
+- Publishing Content Centrally
+- Analyzing Content Centrally
+- Tailoring Strategies Based on Analytics
+- Encouraging Interactions
 
-Develop a SaaS website and apps, allowing people to centralize their communication and streamline their communication process on a single platform. This is acheived, thanks to a proprietary AI guiding them in their content creation strategy.
+The vision of Inkom is to bring actionnable and concrete facts users can leverage to make their communication more impactful whie spending less time on creating content.
 
-#### 1.2.4 Target Audience
+#### 1.3.2. Objectives
 
-**Entrepreneurs:** Professional people struggling with communication, either by a lack of time, money or inspiration.
+- **API Linking:** A unified endpoint streamlines interaction with all social media features, ensuring seamless integration and simplicity.
+- **Turnkey Intuitive Application:** Designed for efficiency, the application prioritizes essential functions, eliminating unnecessary complexity.
+- **Cross-Platform Usage and Support:** Offered as a SaaS solution, the platform includes both a web application and a mobile app, delivering core functionalities across devices.
 
-#### 1.2.5. Deliverables
+
+#### 1.3.3. Scope
+
+The scope of the Inkom project is to develop a centralized communication platform as a SaaS solution that empowers entrepreneurs by streamlining and automating communication workflows. The platform will enable users to manage their social media presence efficiently, regardless of their level of expertise, through an intuitive interface and advanced tools.
+
+#### 1.3.4 Target Audience
+
+- **Entrepreneurs:** Empower individuals to focus on their core business by automating communication tasks, providing an intuitive platform to create, publish, and analyze content effortlessly, even without prior expertise.
+
+- **Small-to-Medium Businesses:** Enhance team efficiency and scalability with centralized social media management, enabling streamlined workflows, consistent branding, and data-driven strategies tailored to business growth.
+
+- **Consultants:** Offer a professional-grade tool to optimize client services by simplifying social media integrations, generating tailored content ideas, and delivering insightful analytics to demonstrate measurable results.
+- 
+#### 1.3.5. Deliverables
 
 - Functional Specification Document
 - Technical Specification Document
@@ -87,13 +114,13 @@ Develop a SaaS website and apps, allowing people to centralize their communicati
 - User Manual
 - Final presentation of the project
 
-### 1.3. Project Plan
+### 1.4. Project Plan
 
-#### 1.3.1. Retroplanning
+#### 1.4.1. Retroplanning
 
-#### 1.3.2. Milestones
+#### 1.4.2. Milestones
 
-#### 1.3.3. Dependencies
+#### 1.4.3. Dependencies
 
 **Task dependencies:**
 
@@ -101,16 +128,20 @@ Develop a SaaS website and apps, allowing people to centralize their communicati
 - Nice-to-have Features Development cannot start until Core Feature Development have not been completed.
 - Testing phase cannot start until Core Feature Development have not been completed.
 
-#### 1.3.4. Assumptions/Constraints
+#### 1.4.4. Assumptions/Constraints
 
 **Assumptions:**
 
 - 
 
-#### 1.3.5. Risks/Mitigation
+#### 1.4.5. Risks/Mitigation
 
-| ID  | Description | Consequence | Impact | Likelihood | Mitigation/Avoidance |
-| --- | ----------- | ----------- | ------ | ---------- | -------------------- |
+| ID  | Description                                                                  | Consequence                                            | Impact | Likelihood | Mitigation/Avoidance                                                 |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------------------------ | ------ | ---------- | -------------------------------------------------------------------- |
+| 1   | A similar solution is released                                               | Check for any possible infringed patent                | High   | Medium     | Monitor technology development in communication field                |
+| 2   | Used social media platforms evolved                                          | Add a support for newly popular social media platforms | Medium | Medium     | Monitor trending social media platforms usage (mainly for consumers) |
+| 3   | New features are released on existing social media platforms                 | Add a support for the newly added features             | Medium | High       | Monitor new features added to social media platforms                 |
+| 4   | End of support / breaking changes of APIs for certain social media platforms | Switch to the newest API version or find alternatives  | High   | Low        | Monitor and anticipate API version switching                         |
 
 ## 2. Personas and Use Cases
 
@@ -202,6 +233,7 @@ As an initial version (MVP), the application is only going to support a limited 
 - Instagram
 - LinkedIn
 - Twitter
+- Facebook
 
 #### 3.1.3. Authentication requirements
 
@@ -250,5 +282,3 @@ The integration of Linux and wider platforms will be done in future updates.
 ### 4.3. Reliability
 
 ### 4.4. Availability
-
-## 5. Glossary
