@@ -103,7 +103,7 @@ The scope of the Inkom project is to develop a centralized communication platfor
 - **Small-to-Medium Businesses:** Enhance team efficiency and scalability with centralized social media management, enabling streamlined workflows, consistent branding, and data-driven strategies tailored to business growth.
 
 - **Consultants:** Offer a professional-grade tool to optimize client services by simplifying social media integrations, generating tailored content ideas, and delivering insightful analytics to demonstrate measurable results.
-- 
+
 #### 1.3.5. Deliverables
 
 - Functional Specification Document
