@@ -1,222 +1,50 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useTranslation } from "react-i18next";
-const API_URL = import.meta.env.VITE_API_URL;
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import { invoke } from "@tauri-apps/api/core";
+import "./App.css";
 
 function App() {
-  // Translation module
-  const { t } = useTranslation();
-  // State to manage notifications
-  const [notification, setNotification] = useState<{
-    message: string;
-    type: string;
-  } | null>(null);
+  const [greetMsg, setGreetMsg] = useState("");
+  const [name, setName] = useState("");
 
-  // Function to show notifications
-  const showNotification = (message: string, type: "success" | "error") => {
-    setNotification({ message, type });
-    setTimeout(() => {
-      setNotification(null);
-    }, 3000);
-  };
-
-  async function prelaunchRegister(): Promise<void> {
-    const mailField = document.getElementById("email") as HTMLInputElement;
-
-    // Validate email
-    if (
-      mailField.value &&
-      mailField.value !== "" &&
-      mailField.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)
-    ) {
-      try {
-        const response = await axios.post(`${API_URL}/v0/prelaunch/subscribe`, {
-          email: mailField.value,
-        });
-
-        // Handle success
-        if (response.status === 201) {
-          showNotification(t("subscription.success"), "success");
-        }
-
-        // Clear the email field
-        mailField.value = "";
-      } catch (error: any) {
-        // Handle Axios errors, especially 409 Conflict
-        if (error.response) {
-          if (error.response.status === 409) {
-            showNotification(t("subscription.alreadySubscribed"), "error");
-          } else if (
-            error.response.status >= 400 &&
-            error.response.status < 500
-          ) {
-            showNotification(
-              error.response.data.message ||
-              t("subscription.error"),
-              "error"
-            );
-          } else {
-            showNotification(t("subscription.serverError"), "error");
-          }
-        } else {
-          showNotification(t("subscription.networkError"), "error");
-        }
-      }
-    } else {
-      // Invalid email
-      showNotification(t("subscription.invalidEmail"), "error");
-    }
+  async function greet() {
+    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
+    setGreetMsg(await invoke("greet", { name }));
   }
 
-  useEffect(() => {
-    const layer = document.getElementById("main");
-
-    if (layer) {
-      const logoInsta = document.getElementById("logo-insta");
-      const logoLinkedin = document.getElementById("logo-linkedin");
-      const logoTiktok = document.getElementById("logo-tiktok");
-      const logoYoutube = document.getElementById("logo-youtube");
-      const logoMyBusiness = document.getElementById("logo-my-business");
-
-      const handleMouseMove = (e: MouseEvent) => {
-        const instavalueX = (e.pageX * -1) / 30;
-        const instavalueY = (e.pageY * -1) / 30;
-        const linkedinvalueX = (e.pageX * -1) / 40;
-        const linkedinvalueY = (e.pageY * -1) / 60;
-        const tiktokvalueX = (e.pageX * -1) / 50;
-        const tiktokvalueY = (e.pageY * -1) / 50;
-        const youtubevalueX = (e.pageX * -1) / 60;
-        const youtubevalueY = (e.pageY * -1) / 40;
-        const mybusinessvalueX = (e.pageX * -1) / 120;
-        const mybusinessvalueY = (e.pageY * -1) / 70;
-
-        if (logoInsta) {
-          logoInsta.style.transform = `translate3d(${instavalueX}px, ${instavalueY}px, 0)`;
-        }
-        if (logoLinkedin) {
-          logoLinkedin.style.transform = `translate3d(${linkedinvalueX}px, ${linkedinvalueY}px, 0)`;
-        }
-        if (logoTiktok) {
-          logoTiktok.style.transform = `translate3d(${tiktokvalueX}px, ${tiktokvalueY}px, 0)`;
-        }
-        if (logoYoutube) {
-          logoYoutube.style.transform = `translate3d(${youtubevalueX}px, ${youtubevalueY}px, 0)`;
-        }
-        if (logoMyBusiness) {
-          logoMyBusiness.style.transform = `translate3d(${mybusinessvalueX}px, ${mybusinessvalueY}px, 0)`;
-        }
-      };
-
-      layer.addEventListener("mousemove", handleMouseMove);
-
-      return () => {
-        layer.removeEventListener("mousemove", handleMouseMove);
-      };
-    }
-  }, []);
-
   return (
-    <>
-      {/* Notification Display */}
-      {notification && (
-        <div
-          className={`fixed top-4 right-4 px-4 py-2 rounded-lg shadow-lg z-50
-          ${notification.type === "success" ? "bg-green-500" : "bg-red-500"}
-          text-white`}
-        >
-          {notification.message}
-        </div>
-      )}
+    <main className="container">
+      <h1>Welcome to Tauri + React</h1>
 
-      <div className="w-screen h-screen overflow-hidden" id="main">
-        <div className="w-screen h-screen flex flex-col items-center justify-center absolute top-0 left-0">
-          <img src="/assets/inkom.png" alt="Inkom" className="w-2/5" />
-          <h1 className="text-3xl font-bold text-white w-1/2 text-center">
-            {t("content.slogan")}
-          </h1>
-          <label className="text-white mt-4">
-          {t("content.cta")}
-          </label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-2/5 p-2 mt-1 rounded-lg"
-            id="email"
-          />
-          <button
-            className="bg-blue-500 text-white p-2 mt-4 rounded-lg"
-            onClick={prelaunchRegister}
-          >
-            {t("content.button")}
-          </button>
-        </div>
-
-        <div
-          className="parallax absolute w-[16vw] flex items-center justify-center"
-          style={{ top: "23vh", left: "4vw" }}
-          id="logo-insta"
-        >
-          <img
-            className="absolute w-[14.5vw]"
-            style={{ filter: "blur(5px)" }}
-            src="/assets/instagram.svg"
-          />
-          <img className="absolute w-[14vw]" src="/assets/instagram.svg" />
-        </div>
-
-        <div
-          className="parallax absolute w-[16vw] flex items-center justify-center"
-          style={{ top: "18vh", left: "70vw" }}
-          id="logo-linkedin"
-        >
-          <img
-            className="absolute w-[14.5vw]"
-            style={{ filter: "blur(5px)" }}
-            src="/assets/linkedin.svg"
-          />
-          <img className="absolute w-[14vw]" src="/assets/linkedin.svg" />
-        </div>
-
-        <div
-          className="parallax absolute w-[16vw] flex items-center justify-center"
-          style={{ top: "85vh", left: "70vw" }}
-          id="logo-tiktok"
-        >
-          <img
-            className="absolute w-[14.5vw]"
-            style={{ filter: "blur(5px)" }}
-            src="/assets/tiktok.svg"
-          />
-          <img className="absolute w-[14vw]" src="/assets/tiktok.svg" />
-        </div>
-
-        <div
-          className="parallax absolute w-[16vw] flex items-center justify-center"
-          style={{ top: "75vh", left: "15vw" }}
-          id="logo-youtube"
-        >
-          <img
-            className="absolute w-[14.5vw]"
-            style={{ filter: "blur(5px)" }}
-            src="/assets/youtube.svg"
-          />
-          <img className="absolute w-[14vw]" src="/assets/youtube.svg" />
-        </div>
-
-        <div
-          className="parallax absolute w-[16vw] flex items-center justify-center"
-          style={{ top: "60vh", left: "79vw" }}
-          id="logo-my-business"
-        >
-          <img
-            className="absolute w-[14.5vw]"
-            style={{ filter: "blur(5px)" }}
-            src="/assets/my-business.svg"
-          />
-          <img className="absolute w-[14vw]" src="/assets/my-business.svg" />
-        </div>
+      <div className="row">
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
+        </a>
+        <a href="https://tauri.app" target="_blank">
+          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-    </>
+      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+
+      <form
+        className="row"
+        onSubmit={(e) => {
+          e.preventDefault();
+          greet();
+        }}
+      >
+        <input
+          id="greet-input"
+          onChange={(e) => setName(e.currentTarget.value)}
+          placeholder="Enter a name..."
+        />
+        <button type="submit">Greet</button>
+      </form>
+      <p>{greetMsg}</p>
+    </main>
   );
 }
 
