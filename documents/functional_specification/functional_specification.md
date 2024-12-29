@@ -15,7 +15,7 @@
       - [1.3.4 Target Audience](#134-target-audience)
       - [1.3.5. Deliverables](#135-deliverables)
     - [1.4. Project Plan](#14-project-plan)
-      - [1.4.1. Retroplanning](#141-retroplanning)
+      - [1.4.1. Planning](#141-planning)
       - [1.4.2. Milestones](#142-milestones)
       - [1.4.3. Dependencies](#143-dependencies)
       - [1.4.4. Assumptions/Constraints](#144-assumptionsconstraints)
@@ -63,7 +63,7 @@
 
 ### 1.2. Project Overview
 
-This project aims to create a SaaS-format cross-platform application to help professionals to create a more impactful communication thanks to Artificial Intelligence (AI) and social media platforms centralization.
+This project aims to develop a cross-platform SaaS application designed to optimize entrepreneurs' return on investment in digital communication. It leverages Artificial Intelligence and social media data analysis to simplify the process while reducing entry barriers associated with technical expertise, financial or time constraints.
 
 This project is the end-of-cursus project of [Antoine PREVOST](https://linkedin.com/in/antoine-prevost-dev), but also aims to create a company to sell this SaaS.
 
@@ -87,14 +87,13 @@ The vision of Inkom is to bring actionnable and concrete facts users can leverag
 
 #### 1.3.2. Objectives
 
-- **API Linking:** A unified endpoint streamlines interaction with all social media features, ensuring seamless integration and simplicity.
-- **Turnkey Intuitive Application:** Designed for efficiency, the application prioritizes essential functions, eliminating unnecessary complexity.
-- **Cross-Platform Usage and Support:** Offered as a SaaS solution, the platform includes both a web application and a mobile app, delivering core functionalities across devices.
-
+- **Content Management Hub:** A centralized platform for managing all content creation and publication needs.
+- **Actionable Content Insights:** Provides clear guidelines to enhance content engagement and value.
+- **Cross-Platform Support:** A SaaS solution available as both a web application and a lightweight mobile app, ensuring accessibility across devices.
 
 #### 1.3.3. Scope
 
-The scope of the Inkom project is to develop a centralized communication platform as a SaaS solution that empowers entrepreneurs by streamlining and automating communication workflows. The platform will enable users to manage their social media presence efficiently, regardless of their level of expertise, through an intuitive interface and advanced tools.
+The scope of the Inkom project is to develop a SaaS communication platform that streamlines and automates communication workflows for entrepreneurs. It empowers users to efficiently manage their social media presence with an intuitive interface and advanced tools, regardless of their expertise or resources.
 
 #### 1.3.4 Target Audience
 
@@ -106,50 +105,79 @@ The scope of the Inkom project is to develop a centralized communication platfor
 
 #### 1.3.5. Deliverables
 
-- Functional Specification Document
-- Technical Specification Document
-- Test Plan & Test Cases
-- Test Bed for the app
-- Mock-ups of the application
-- Source Code and AI model for content strategies
-- Source Code for the website and mobile application
-- User Manual
-- Final presentation of the project
+<!-- Add onk to the website when available -->
+
+The primary deliverable of this project is the final application, which will be made publicly available on app stores and for direct download via [our website](#).
+
+To ensure consistency throughout the development process and document all features, the following additional deliverables will be produced:  
+
+| Deliverable                                    | Purpose                                                                        |
+| ---------------------------------------------- | ------------------------------------------------------------------------------ |
+| Functional Specification Document              | Defines the application's functionality and requirements.                      |
+| Technical Specification Document               | Details the technical architecture and implementation.                         |
+| Test Plan & Test Cases                         | Outlines the testing strategy and specific tests for validating functionality. |
+| Test Bed                                       | A controlled environment to execute and evaluate the application.              |
+| Mock-Ups                                       | Visual prototypes of the application interface.                                |
+| Source Code and AI Model                       | Includes the AI model for content strategies and the complete source code.     |
+| Source Code for Website and Mobile Application | Codebase for the platform's web and mobile components.                         |
+| User Manual                                    | Comprehensive documentation for end-users.                                     |
+| Final Project Presentation                     | Summarizes the project's outcomes and achievements.                            |
+
+Additionally, progress presentations will be conducted throughout the course to review project milestones and support the graduation process of [Antoine Prevost](https://github.com/TechXplorerFR).  
 
 ### 1.4. Project Plan
 
-#### 1.4.1. Retroplanning
+#### 1.4.1. Planning
+
+The [Gantt Chart](https://docs.google.com/spreadsheets/d/1rNRcJh22dUDlhf4dmPxH1mff9Aw21R4dun3HtO3kdFY/edit?usp=sharing) provides the evolving project timeline and planning details.
 
 #### 1.4.2. Milestones
 
+| Date       | Milestone                                            |
+| ---------- | ---------------------------------------------------- |
+| 08/01/2024 | Project Kick-Off                                     |
+| 10/31/2024 | Proof of Concept (PoC) / Feasibility Check           |
+| 11/30/2024 | Completion of Market Analysis                        |
+| 02/28/2025 | Beta Testing Phase Kick-Off (Minimum Viable Product) |
+| 05/01/2025 | Release 1                                            |
+| TBD        | Release 2                                            |
+
 #### 1.4.3. Dependencies
 
-**Task dependencies:**
-
-- Core Feature Development cannot start before the completion of the mock-ups.
-- Nice-to-have Features Development cannot start until Core Feature Development have not been completed.
-- Testing phase cannot start until Core Feature Development have not been completed.
+- Minimum Viable Product development cannot start before the Proof of Concept and market analysis have not been completed.
+- Beta Testing cannot start before Minimum Viable Product has not been completed.
+- Apart from fixes, development on new features for Relases cannot start before feedback has been gathered on the current version.
 
 #### 1.4.4. Assumptions/Constraints
 
 **Assumptions:**
 
-- *Basic Knowledge of Users:* Users will already have basic knowledge about social media.
-- *Solution Trust:* The solution is trusted by the user not to use their data without their consent.
-- *Internet Access:* Users will have stable internet access to utilize the app, as social media API interactions require connectivity.
-- *Social Media Accounts:* Users already have social media accounts they intend to link to the platform.
-- *Content Approval:* Users are responsible for approving all content before publishing.
-- *API Stability:* Social media platform APIs will remain relatively stable during the development and initial deployment of the MVP.
+
+| Assumption                      | Description                                                                                                                              |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Basic User Knowledge            | Users have basic familiarity with social media platforms and content workflows.                                                          |
+| Data Privacy Trust              | Users trust the platform to handle their data securely and only with their explicit consent.                                             |
+| Reliable Internet Access        | Users have stable internet connectivity, required for social media API interactions and platform functionality.                          |
+| Existing Social Media Accounts  | Users possess active social media accounts they plan to integrate with the platform.                                                     |
+| User Responsibility for Content | Users are accountable for reviewing and approving all content before it is published.                                                    |
+| API Reliability                 | Social media platform APIs are assumed to remain functional and relatively stable during development and MVP launch.                     |
+| Device Compatibility            | Users access the platform via devices meeting minimum hardware and software requirements (e.g., supported browsers, mobile OS versions). |
+| Legal Compliance                | Users adhere to relevant legal requirements, such as data protection and copyright laws, while using the platform.                       |
+| Third-Party Service Continuity  | Social media services and APIs will not undergo major changes that disrupt functionality during the MVP phase.                           |
+| Scalability Readiness           | The platform infrastructure can accommodate expected user volume and interactions without significant performance degradation.           |
 
 **Constraints:**
 
-- *Authentication:* Usage of 2FA will be mandatory as we will gather all platforms all in one.
-- *Platform Compatibility:* The application must be compatible with iOS, Android, Windows, Linux, and MacOS. It should also be available on the web.
-- *Security:* Robustness will be key to prevent the user from any data leak which could affect their social media accounts.
-- *API Rate Limits:* Integration with social media platforms will be subject to their API rate limits, which could affect the frequency of operations like posting or analytics retrieval.
-- *Data Privacy Regulations:* Compliance with regulations like GDPR, CCPA, or similar laws must be ensured, particularly for users in affected regions.
-- *Latency:* The system should maintain acceptable latency for key user actions, such as retrieving analytics, despite the potential complexity of cross-platform API interactions. AI-generated content should be generated fast enough for a smooth intergration.
-- *Cost Constraints:* Cloud infrastructure costs for AI model processing and API interactions should be controlled to maintain a sustainable business model.
+| Constraint               | Description                                                                                                                                           |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authentication           | Two-factor authentication (2FA) is mandatory to ensure secure integration of all linked platforms.                                                    |
+| Platform Compatibility   | The application must be compatible with iOS, Android, Windows, Linux, MacOS, and the web.                                                             |
+| Security                 | Robust measures are required to prevent data breaches that could compromise users' social media accounts.                                             |
+| API Rate Limits          | Social media platform interactions must operate within their defined API rate limits, affecting posting and analytics retrieval frequency.            |
+| Data Privacy Regulations | The application must comply with data privacy laws such as GDPR and CCPA, especially for users in affected regions.                                   |
+| Latency                  | The system must provide low-latency performance for actions like retrieving analytics and generating AI content to ensure a seamless user experience. |
+| Cost Constraints         | Cloud infrastructure and AI processing costs must be optimized to support a sustainable business model.                                               |
+
 
 #### 1.4.5. Risks/Mitigation
 
@@ -231,36 +259,25 @@ Profession: Software Engineer & Collective Director
 
 ### 2.2. Use Cases
 
+
+| Use Case                         | Description                                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Social Media Content Scheduling  | A user schedules posts across multiple platforms, specifying dates and times. The system auto-generates optimized posting schedules based on analytics data. |
+| Analytics Retrieval              | A user retrieves engagement analytics for posts across different platforms. The application consolidates the data into a unified view for easy comparison.   |
+| AI-Powered Content Creation      | A user inputs keywords or themes, and the platform generates draft posts or video scripts tailored to their audience.                                        |
+| Social Media Account Integration | A user links their social media accounts to the platform, enabling unified management and analytics.                                                         |
+| Collaborative Editing            | Multiple users collaborate on creating, editing, and approving posts before publishing. The platform tracks changes and approval statuses.                   |
+| User Notifications               | The system notifies users of key events, such as scheduled posts going live, upcoming deadlines, or analytics insights that require attention.               |
+| GDPR Compliance Management       | Users configure their accounts to ensure compliance with regional data privacy laws, including opt-in consent settings for their audience.                   |
+| Real-Time Feedback               | The platform provides real-time feedback on post quality, recommending changes to improve engagement potential before publishing.                            |
+
 ## 3. Functional Requirements
 
 ### 3.1. Backend
 
 #### 3.1.1. Overview
 
-The backend of Inkom is the core component of the application, designed to centralize and streamline complex social media tasks. It handles the following:
-
-- **Interactions with Social Media APIs**  
-  - Publishing content across platforms from a single interface.  
-  - Retrieving analytics data to help users evaluate their performance.
-
-- **Analytics Data Analysis**  
-  - Processing retrieved analytics to present actionable insights.
-
-- **Authentication Systems & OAuth 2.0 Portal**  
-  - Ensuring secure user connections to their social media accounts.
-
-- **Billing Services**  
-  - Managing subscription payments using Stripe.
-
-- **File Management System**  
-  - Supporting content uploads, storage, and processing for posts or videos.
-
-- **Social Media API Testing Scripts**  
-  - Ensuring reliability by monitoring platform interactions.
-
-These features are designed to save users time and provide a seamless, secure experience managing their online presence.
-
----
+The backend of Inkom is the core component of the application, designed to centralize and streamline complex social media tasks.
 
 #### 3.1.2. API Linking
 

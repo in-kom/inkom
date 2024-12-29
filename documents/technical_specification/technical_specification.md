@@ -34,8 +34,8 @@
     - [4.2. Scalability Requirements](#42-scalability-requirements)
     - [4.3. Security Requirements](#43-security-requirements)
     - [4.4. Availability Requirements](#44-availability-requirements)
-  - [**5. Risks and Mitigation**](#5-risks-and-mitigation)
-  - [**6. Implementation Plan**](#6-implementation-plan)
+  - [5. Risks and Mitigation](#5-risks-and-mitigation)
+  - [6. Implementation Plan](#6-implementation-plan)
     - [6.1. Milestones and Timeline](#61-milestones-and-timeline)
     - [6.2. Technology Stack](#62-technology-stack)
     - [6.3. Testing Plan](#63-testing-plan)
@@ -129,9 +129,9 @@ Include a diagram outlining the relationship between the **frontend**, **backend
 
 ### 4.4. Availability Requirements
 
-## **5. Risks and Mitigation**
+## 5. Risks and Mitigation
 
-## **6. Implementation Plan**
+## 6. Implementation Plan
 
 ### 6.1. Milestones and Timeline
 

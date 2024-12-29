@@ -85,15 +85,14 @@ The project planning will involve defining the application's tasks and objective
 
 The milestones listed below focus on delivering the prototype version, the first usable base of this deliverables. As mentioned in the [Project Plan](#project-plan), these deliverables will undergo an iterative process with continuous updates.
 
-| Date       | Milestone                                |
-| ---------- | ---------------------------------------- |
-| 08/01/2024 | Project kick-off                         |
-| 08/20/2024 | Functional specification delivery        |
-| 09/10/2024 | Technical specification delivery         |
-| 10/01/2024 | Test plan delivery                       |
-| 12/01/2024 | Working prototype without proprietary AI |
-| 12/01/2024 | User Manual delivery                     |
-| 03/01/2025 | Proprietary AI API                       |
+| Date       | Milestone                                            |
+| ---------- | ---------------------------------------------------- |
+| 08/01/2024 | Project Kick-Off                                     |
+| 10/31/2024 | Proof of Concept / Feasibility Check                 |
+| 11/30/2024 | Completion of Market Analysis                        |
+| 02/28/2025 | Beta Testing Phase Kick-Off (Minimum Viable Product) |
+| 05/01/2025 | Release 1                                            |
+| TBD        | Release 2                                            |
 
 ## Deliverables
 
